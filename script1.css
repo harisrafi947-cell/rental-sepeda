@@ -1,0 +1,865 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo .green {
+    color: #18a558;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #18a558;
+}
+
+.btn-nav {
+    background: #18a558;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.10)
+        ),
+        url("images/hero-bike.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+
+    margin: auto;
+
+    padding: 100px 20px 40px;
+
+    color: white;
+}
+
+.small-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-size: 55px;
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #5de68d;
+}
+
+.hero-text {
+    max-width: 560px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+    color: #e8e8e8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #18a558;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+
+/* ================= ADVANTAGES ================= */
+
+.advantages {
+    max-width: 1100px;
+
+    margin: -45px auto 0;
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    background: #e9f9ef;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.advantage h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.advantage p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section,
+.how-section,
+.payment-section {
+    padding: 100px 20px;
+}
+
+.section-title {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.section-title p {
+    color: #18a558;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ================= BIKE ================= */
+
+.bike-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.bike-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.bike-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.bike-image {
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.bike-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.bike-card:hover img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: #18a558;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.badge.blue {
+    background: #2563eb;
+}
+
+.badge.orange {
+    background: #f59e0b;
+}
+
+.bike-content {
+    padding: 22px;
+}
+
+.bike-content h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.bike-content p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 45px;
+}
+
+.bike-info {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+    font-size: 11px;
+
+    color: #666;
+}
+
+.price {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #18a558;
+
+    margin-bottom: 15px;
+}
+
+.price small {
+    font-size: 11px;
+
+    color: #888;
+
+    font-weight: 400;
+}
+
+.rent-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #18a558;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.rent-btn:hover {
+    background: #128044;
+}
+
+
+/* ================= CARA PESAN ================= */
+
+.how-section {
+    background: #f5faf7;
+}
+
+.steps {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.step {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.number {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #dff6e8;
+
+    color: #18a558;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.step h3 {
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= PAYMENT ================= */
+
+.payment-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.payment-card {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border: 1px solid #eee;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.payment-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.payment-card h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.payment-card p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ================= BOOKING ================= */
+
+.booking-section {
+    padding: 80px 20px;
+
+    background: #18a558;
+}
+
+.booking-box {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.booking-text {
+    color: white;
+}
+
+.booking-text p:first-child {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.booking-text h2 {
+    font-size: 35px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.booking-text p:last-child {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #e5fff0;
+}
+
+form {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #18a558;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.total-box {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #eefaf2;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin: 20px 0;
+}
+
+.total-box span {
+    font-size: 13px;
+}
+
+.total-box strong {
+    color: #18a558;
+
+    font-size: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    background: #18a558;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #128044;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-content h2 {
+    margin-bottom: 15px;
+}
+
+.footer-content h2 span {
+    color: #18a558;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content p,
+.footer-content a {
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    text-decoration: none;
+}
+
+.footer-content a {
+    display: block;
+}
+
+.footer-content a:hover {
+    color: #5de68d;
+}
+
+.copyright {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .bike-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-box {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav-menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .bike-container {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
